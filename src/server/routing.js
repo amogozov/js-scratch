@@ -18,7 +18,6 @@ import renderApp from "./render-app";
 
 export default (app: Object) => {
   app.get(HOME_PAGE_ROUTE, (req, res) => {
-    console.info("FFF");
     res.send(renderApp(req.url, homePage()));
   });
 

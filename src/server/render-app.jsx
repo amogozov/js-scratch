@@ -3,7 +3,7 @@
 import React from "react";
 import { renderToString } from "react-dom/server"
 import { Provider } from "react-redux";
-import { StaticRouter } from "react-router";
+import { StaticRouter } from "react-router-dom/server";
 
 import initStore from "./init-store";
 import App from "../shared/app";
@@ -15,12 +15,7 @@ const renderApp = (
   plainPartialState: ?Object,
   routerContext: ?Object = {}
 ) => {
-  console.info(App)
-  console.info("store");
   const store = initStore(plainPartialState);
-  console.info("html");
-  console.info(location);
-  console.info(plainPartialState);
   const appHtml = renderToString(
     <Provider store={store}>
       <StaticRouter location={location} context={routerContext}>
@@ -28,8 +23,6 @@ const renderApp = (
       </StaticRouter>
     </Provider>
   );
-
-  console.info("returning");
 
   return `<!doctype html>
     <html>
