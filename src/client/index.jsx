@@ -4,7 +4,7 @@
 
 import "@babel/polyfill";
 
-import Immutable from 'immutable'
+import Immutable from "immutable";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
