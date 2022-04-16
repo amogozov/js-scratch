@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "parser": "@babel/eslint-parser",
+  "extends": ["plugin:flowtype/recommended", "airbnb", "prettier"],
+  "settings": {
+    "polyfills": ["fetch"]
+  },
+  "plugins": ["flowtype", "compat"],
+  "rules": {
+    "no-unexpected-multiline": 2,
+    "compat/compat": 2
+  }
+}
