@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Helmet from "react-helmet";
 import { APP_NAME } from "./config";
 import Nav from "./component/nav";
 import HomePage from "./component/page/home";
@@ -17,7 +18,7 @@ import {
 function App() {
   return (
     <div>
-      <h1>{APP_NAME}</h1>
+      <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
       <Nav />
       <Routes>
         <Route exact path={HOME_PAGE_ROUTE} element={<HomePage />} />
