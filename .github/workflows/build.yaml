@@ -1,4 +1,4 @@
-name: Node.js CI with yarn
+name: Node.js CI
 
 on:
   push:
