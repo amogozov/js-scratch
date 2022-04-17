@@ -16,6 +16,7 @@ import App from "../shared/app";
 import helloReducer from "../shared/reducer/hello";
 import { APP_CONTAINER_SELECTOR } from "../shared/config";
 import { isProd } from "../shared/util";
+import setUpSocket from "./socket";
 
 /* eslint-enable */
 
@@ -52,3 +53,5 @@ if (module.hot) {
     root.render(wrapApp(NextApp, store));
   });
 }
+
+setUpSocket(store);
