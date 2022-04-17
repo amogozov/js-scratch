@@ -9,7 +9,7 @@ type Props = {
 
 function Button({ label, handleClick }: Props) {
   return (
-    <button type="button" onClick={handleClick}>
+    <button onClick={handleClick} className="btn btn-primary" type="button">
       {label}
     </button>
   );
